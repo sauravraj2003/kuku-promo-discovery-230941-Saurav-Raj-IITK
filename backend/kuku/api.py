@@ -31,10 +31,13 @@ def create_app(settings=None):
     if os.getenv("KUKU_AUTO_SEED", "0") == "1":
         try:
             if not store.episodes():
+                print(f"[kuku] Seeding corpus from: {settings.source_dir}", flush=True)
                 seeded_eps = ingest(settings, store)
+                print(f"[kuku] Ingested {len(seeded_eps)} episodes. Running candidate discovery...", flush=True)
                 discover(settings, store, seeded_eps, settings.provider, DiscoveryConfig())
-        except Exception:
-            pass
+                print("[kuku] Auto-seed discovery completed successfully.", flush=True)
+        except Exception as e:
+            print(f"[kuku] Auto-seed warning: {e}", flush=True)
 
 
 
@@ -167,7 +170,13 @@ def create_app(settings=None):
     def validate(request: ValidateRequest):
         return validate_segments(request.segments, {e.number: e for e in store.episodes()}, request.max_segments)
 
-    dist = ROOT / "frontend/dist"
+    dist_candidates = [
+        ROOT / "frontend/dist",
+        Path.cwd() / "frontend/dist",
+        Path(__file__).resolve().parents[2] / "frontend/dist",
+        Path(__file__).resolve().parents[1] / "frontend/dist",
+    ]
+    dist = next((d for d in dist_candidates if (d / "index.html").is_file()), ROOT / "frontend/dist")
 
     @app.get("/")
     def index():

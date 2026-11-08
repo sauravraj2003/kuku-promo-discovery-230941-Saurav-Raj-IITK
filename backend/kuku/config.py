@@ -2,7 +2,24 @@ from dataclasses import dataclass
 from pathlib import Path
 import os
 
-ROOT = Path(__file__).resolve().parents[2]
+
+def find_root() -> Path:
+    candidates = [
+        Path.cwd(),
+        Path(__file__).resolve().parents[2],
+        Path(__file__).resolve().parents[1],
+        Path(__file__).resolve().parents[0],
+    ]
+    for c in candidates:
+        if (c / "I Married a Broken Soldier. He was a Duke").is_dir():
+            return c
+    for c in candidates:
+        if (c / "frontend" / "dist").is_dir():
+            return c
+    return Path.cwd()
+
+
+ROOT = find_root()
 
 
 @dataclass(frozen=True)

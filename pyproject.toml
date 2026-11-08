@@ -21,6 +21,6 @@ kuku = "kuku.cli:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["backend"]
+pythonpath = ["backend", "."]
 addopts = "--basetemp=.runtime/pytest_tmp"
 
