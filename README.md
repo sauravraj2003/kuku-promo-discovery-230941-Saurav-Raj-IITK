@@ -1,6 +1,6 @@
 # KUKU — Microdrama Promotional Candidate Discovery & Editorial Workbench
 
-**Candidate Name:** Saurav Raj | **Roll No:** 230941 | **Branch:** Statistics and Data Science, IIT Kanpur  
+Saurav Raj | **Roll No:** 230941 | **Branch:** Statistics and Data Science, IIT Kanpur  
 **Live Deployed Review Workbench:** https://kuku-promo-discovery-230941-saurav-raj.onrender.com  
 **GitHub Repository:** https://github.com/sauravraj2003/kuku-promo-discovery-230941-Saurav-Raj-IITK  
 **Solution Brief (2-Page PDF):** [`docs/SOLUTION_DOC.md`](docs/SOLUTION_DOC.md)  
