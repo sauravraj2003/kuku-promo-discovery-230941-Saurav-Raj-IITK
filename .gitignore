@@ -1,0 +1,23 @@
+# Virtual environment & tools
+.venv/
+.runtime/
+.cache/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.env
+
+# Large SQLite databases (regenerated on kuku discover, >100MB exceeds GitHub limit)
+*.sqlite3
+data/*.sqlite3
+
+# Frontend dependencies & test reports
+frontend/node_modules/
+frontend/test-results/
+frontend/playwright-report/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,268 @@
+{
+  "corpus": {
+    "episodes": 50,
+    "scenes": 100,
+    "entries": 3727,
+    "entry_kinds": {
+      "camera": 1754,
+      "action": 372,
+      "dialogue": 1487,
+      "sound_fx": 114
+    },
+    "duration_cs": 616262,
+    "timeline_union_cs": 614352,
+    "diagnostics": {
+      "overlapping_dialogue": 10,
+      "source_order_is_not_time_order": 8,
+      "event_crosses_scene_boundary": 1
+    }
+  },
+  "audit": {
+    "matches_audited_sources": true,
+    "expected_files": 50,
+    "actual_files": 50
+  },
+  "shortlist": [
+    {
+      "rank": 1,
+      "candidate_id": "C-1059831f66db92bdcb8b",
+      "episode": 1,
+      "variant_group": "E01:E01-B066",
+      "start_text": "01:35.80",
+      "end_text": "01:59.80",
+      "duration_cs": 2400,
+      "duration_text": "24.00s",
+      "hook_quote": "Close-up on Juliana as she rises, stung by the utter betrayal.",
+      "hook_evidence_id": "E01-B066",
+      "cliffhanger_text": "\"So that is what I was worth to you?\"",
+      "cliffhanger_evidence_id": "E01-B082",
+      "unresolved_question": "Will the consequence of '\"So that is what I was worth to you?\"...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 01:35.80 and cuts at 01:59.80 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 2,
+      "candidate_id": "C-b68534dc0eae02f2ee90",
+      "episode": 2,
+      "variant_group": "E02:E02-B002",
+      "start_text": "00:00.00",
+      "end_text": "00:51.40",
+      "duration_cs": 5140,
+      "duration_text": "51.40s",
+      "hook_quote": "THE FORMER GROOM: \"I cannot marry you, Juliana.\"",
+      "hook_evidence_id": "E02-B002",
+      "cliffhanger_text": "\"Why are you surprised, sister? Look at you.\"",
+      "cliffhanger_evidence_id": "E02-B034",
+      "unresolved_question": "Will the consequence of '\"Why are you surprised, sister? Look at you.\"...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:00.00 and cuts at 00:51.40 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 3,
+      "candidate_id": "C-4ec73bf311673b749a3e",
+      "episode": 3,
+      "variant_group": "E03:E03-B022",
+      "start_text": "00:28.00",
+      "end_text": "01:13.00",
+      "duration_cs": 4500,
+      "duration_text": "45.00s",
+      "hook_quote": "Close-up on Juliana, tears shimmering in her eyes as betrayal strikes deep.",
+      "hook_evidence_id": "E03-B022",
+      "cliffhanger_text": "Close-up on the Noble Matriarch freezing in utter shock and outrage.",
+      "cliffhanger_evidence_id": "E03-B058",
+      "unresolved_question": "Will the consequence of 'Close-up on the Noble Matriarch freezing in utter shock and ...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:28.00 and cuts at 01:13.00 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 4,
+      "candidate_id": "C-7e70f50df5456177b861",
+      "episode": 4,
+      "variant_group": "E04:E04-B029",
+      "start_text": "00:34.00",
+      "end_text": "01:25.80",
+      "duration_cs": 5180,
+      "duration_text": "51.80s",
+      "hook_quote": "MYSTERIOUS BEARDED MAN: \"A woman who was betrayed.\"",
+      "hook_evidence_id": "E04-B029",
+      "cliffhanger_text": "\"Are you certain?\"",
+      "cliffhanger_evidence_id": "E04-B063",
+      "unresolved_question": "Will the consequence of '\"Are you certain?\"...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:34.00 and cuts at 01:25.80 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 5,
+      "candidate_id": "C-b8516ec9ce30b7f5850c",
+      "episode": 5,
+      "variant_group": "E05:E05-B019",
+      "start_text": "00:33.50",
+      "end_text": "01:05.50",
+      "duration_cs": 3200,
+      "duration_text": "32.00s",
+      "hook_quote": "Close-up of the Mysterious Bearded Man, observing Lord Ashcroft with an unblinking, quietly threatening stare.",
+      "hook_evidence_id": "E05-B019",
+      "cliffhanger_text": "Medium shot of Clarissa and Gerald standing together on the cathedral steps. Clarissa clasps a gloved hand to her mouth in mock shock before bursting into gleeful laughter.",
+      "cliffhanger_evidence_id": "E05-B035",
+      "unresolved_question": "Will the consequence of 'Medium shot of Clarissa and Gerald standing together on the ...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:33.50 and cuts at 01:05.50 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "overlapping_dialogue",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 6,
+      "candidate_id": "C-3dc006505b227e184340",
+      "episode": 9,
+      "variant_group": "E09:E09-B029",
+      "start_text": "00:38.00",
+      "end_text": "01:19.60",
+      "duration_cs": 4160,
+      "duration_text": "41.60s",
+      "hook_quote": "Juliana quickly grabs bundles of dried herbs from the table and turns to Alexander.",
+      "hook_evidence_id": "E09-B029",
+      "cliffhanger_text": "Close-up of Alexander turning from the door, his expression deeply troubled.",
+      "cliffhanger_evidence_id": "E09-B058",
+      "unresolved_question": "Will the consequence of 'Close-up of Alexander turning from the door, his expression ...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:38.00 and cuts at 01:19.60 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 7,
+      "candidate_id": "C-b67963f91f32b019b7a3",
+      "episode": 10,
+      "variant_group": "E10:E10-B011",
+      "start_text": "00:09.10",
+      "end_text": "00:54.00",
+      "duration_cs": 4490,
+      "duration_text": "44.90s",
+      "hook_quote": "JULIANA: \"There is blood running down your arm.\"",
+      "hook_evidence_id": "E10-B011",
+      "cliffhanger_text": "\"Does it hurt?\"",
+      "cliffhanger_evidence_id": "E10-B040",
+      "unresolved_question": "Will the consequence of '\"Does it hurt?\"...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:09.10 and cuts at 00:54.00 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 8,
+      "candidate_id": "C-148c705ad7bc92f96e1e",
+      "episode": 11,
+      "variant_group": "E11:E11-B032",
+      "start_text": "00:34.90",
+      "end_text": "01:19.50",
+      "duration_cs": 4460,
+      "duration_text": "44.60s",
+      "hook_quote": "GERALD: \"You hear that? He threatens me again!\"",
+      "hook_evidence_id": "E11-B032",
+      "cliffhanger_text": "\"Happy?\"",
+      "cliffhanger_evidence_id": "E11-B065",
+      "unresolved_question": "Will the consequence of '\"Happy?\"...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:34.90 and cuts at 01:19.50 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 9,
+      "candidate_id": "C-73d8831f9be56b339cb7",
+      "episode": 13,
+      "variant_group": "E13:E13-B038",
+      "start_text": "00:56.00",
+      "end_text": "01:42.50",
+      "duration_cs": 4650,
+      "duration_text": "46.50s",
+      "hook_quote": "Extreme close-up of Juliana's hand scraping against the frost-covered stone, bright red blood welling from deep puncture wounds.",
+      "hook_evidence_id": "E13-B038",
+      "cliffhanger_text": "\"Please, ring... you have to be here.\"",
+      "cliffhanger_evidence_id": "E13-B066",
+      "unresolved_question": "Will the consequence of '\"Please, ring... you have to be here.\"...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:56.00 and cuts at 01:42.50 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    },
+    {
+      "rank": 10,
+      "candidate_id": "C-3eaa49746cb0bc5db053",
+      "episode": 16,
+      "variant_group": "E16:E16-B032",
+      "start_text": "00:38.20",
+      "end_text": "01:18.80",
+      "duration_cs": 4060,
+      "duration_text": "40.60s",
+      "hook_quote": "Close-up of Juliana's trembling, soil-stained hands wrapped in blood-soaked bandages.",
+      "hook_evidence_id": "E16-B032",
+      "cliffhanger_text": "\"Are you hurt?\"",
+      "cliffhanger_evidence_id": "E16-B059",
+      "unresolved_question": "Will the consequence of '\"Are you hurt?\"...' be revealed or prevented?",
+      "why_it_works": "Opens on immediate high-stakes conflict at 00:38.20 and cuts at 01:18.80 right before resolution.",
+      "standalone_clarity": "Immediate interpersonal stakes are self-evident without prior episode knowledge.",
+      "risks": [
+        "editorial_quality_not_evaluated",
+        "continued_utterance_requires_review",
+        "footage_not_verified",
+        "heuristic_seeds_only",
+        "requires_editor_footage_review"
+      ]
+    }
+  ]
+}
