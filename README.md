@@ -1,6 +1,13 @@
 # KUKU — Microdrama Promotional Candidate Discovery & Editorial Workbench
 
-KUKU is an editorial decision-support prototype for identifying, verifying, and reviewing promotional excerpt candidates in timestamped microdrama screenplays. Its goal is to drastically reduce an editor's manual scrubbing and discovery effort by proposing strictly source-grounded, boundary-safe candidate cuts (20.00–60.00 seconds) without fabricating timestamps or claiming unproven viral prediction.
+**Candidate Name:** Saurav Raj | **Roll No:** 230941 | **Branch:** Statistics and Data Science, IIT Kanpur  
+**Live Deployed Review Workbench:** https://kuku-promo-discovery-230941-saurav-raj.onrender.com  
+**GitHub Repository:** https://github.com/sauravraj2003/kuku-promo-discovery-230941-Saurav-Raj-IITK  
+**Solution Brief (2-Page PDF):** [`docs/SOLUTION_DOC.md`](docs/SOLUTION_DOC.md)  
+
+---
+
+KUKU is an editorial decision-support prototype for identifying, verifying, and reviewing promotional excerpt candidates in timestamped microdrama screenplays. Its goal is to drastically reduce an editor's manual scrubbing and discovery effort (from 4–6 hours to under 10 minutes) by proposing strictly source-grounded, boundary-safe candidate cuts (20.00–60.00 seconds) without fabricating timestamps or claiming unproven viral prediction.
 
 ---
 
@@ -13,6 +20,20 @@ KUKU is an editorial decision-support prototype for identifying, verifying, and 
 - **100% Deterministic & Immutable**: Re-running discovery with identical inputs produces the identical SHA256 fingerprint (`33f4ff0a098c6b241d5498b3ceaa0836f3abdd9a47bee91a074d78325b18b6c6`) with zero mutation of source files.
 - **93 Automated Pytest Tests Passing**: Complete test suite covering AC01–AC10, AC11–AC12, and AC14.
 - **Production React Editorial Review Workbench**: Interactive UI served directly at `/` by FastAPI, featuring candidate filtering (by episode, script-anchored hook ≤3s, cliffhanger ending, approach), screenplay entry inspection, and interactive AC04/AC08 segment validation.
+
+---
+
+## Top Recommended Promos (Curated Shortlist)
+
+Filtering for verified opening hooks ($\le 3.00\text{s}$) and unresolved cliffhanger endings produces the following top distinct recommendations across the corpus:
+
+| Rank | Ep | Timecode Range | Dur | Hook Quote (First $\le 3\text{s}$) | Cliffhanger Ending | Narrative Rationale |
+|---|---|---|---|---|---|---|
+| **#1** | **Ep 2** | `00:00.00` → `00:51.40` | 51.4s | Groom: *"I cannot marry you, Juliana."* | *"Why are you surprised, sister? Look at you."* | **Immediate Altar Betrayal:** Instant shock hook; builds through family cruelty; cuts right on an unresolved accusation. |
+| **#2** | **Ep 23** | `01:19.00` → `02:11.50` | 52.5s | Juliana: *"Someone is poisoning her."* | Door latch turns & cracks open inward | **High-Stakes Benchmark:** Medical revelation; race against time to brew antidote interrupted by approaching footsteps. |
+| **#3** | **Ep 10** | `00:09.10` → `00:54.00` | 44.9s | Juliana: *"There is blood running down your arm."* | *"Does it hurt?"* | **Visceral Action Hook:** Bodily injury hook transitions into intimate emotional vulnerability between the leads. |
+| **#4** | **Ep 1** | `01:35.80` → `01:59.80` | 24.0s | Close-up on Juliana rising, stung by betrayal | *"So that is what I was worth to you?"* | **Fast-Paced Melodrama:** Punchy 24s clip with explosive confrontation ending on an unanswerable question. |
+| **#5** | **Ep 4** | `00:34.00` → `01:25.80` | 51.8s | Bearded Man: *"A woman who was betrayed."* | *"Are you certain?"* | **Mysterious Intrigue:** Hook introduces an assassin/observer; builds tension on whether the plot against Juliana succeeds. |
 
 ---
 
@@ -143,12 +164,21 @@ KUKU is an editorial decision-support prototype for identifying, verifying, and 
 
 ### Launching the Review Workbench & API
 ```powershell
-# Start the FastAPI server
+# Start the FastAPI server locally
 .\.venv\Scripts\python.exe -m uvicorn kuku.api:app --host 127.0.0.1 --port 8000
 ```
+
+### Running with Docker
+```bash
+# Build and run container
+docker build -t kuku-promo .
+docker run -p 7860:7860 kuku-promo
+```
+
 Open your browser to:
-- **Review Workbench UI**: `http://127.0.0.1:8000/`
+- **Review Workbench UI**: `http://127.0.0.1:8000/` (or `http://localhost:7860/` in Docker)
 - **Interactive Swagger API Docs**: `http://127.0.0.1:8000/docs`
+- **Live Cloud Deployment**: [https://kuku-promo-discovery-230941-saurav-raj.onrender.com](https://kuku-promo-discovery-230941-saurav-raj.onrender.com)
 
 ---
 
@@ -169,6 +199,7 @@ Open your browser to:
   - `?offset=0&limit=40`
 - `GET /api/candidates/{candidate_id}` — Candidate details, boundary snap refs, validation audit, and underlying screenplay entries.
 - `GET /api/variant-groups` — Groups of candidate cuts anchored around the same narrative beats.
+- `GET /api/editorial/shortlist` — Curated Top 10 high-impact, non-overlapping promo moments across distinct episodes.
 - `POST /api/validate` — Validate arbitrary promo segments against AC01–AC10 rules.
 
 ---
