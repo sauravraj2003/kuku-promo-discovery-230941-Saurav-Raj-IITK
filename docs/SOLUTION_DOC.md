@@ -10,7 +10,7 @@
 ### **Why I Chose Problem 1 ("Find the Promos")**
 I chose Problem 1 because I am deeply fascinated by the intersection of **attention economics, narrative structure, and algorithmic optimization**.
 
-In the microdrama ecosystem (Kuku, ReelShort, DramaBox), the entire customer acquisition funnel lives or dies by short-form promo ads on TikTok, Instagram Reels, and YouTube Shorts. Viewer behavior is governed by sharp psychological thresholds: you have **under 3 seconds** to halt a user’s scroll, and you need high-tension narrative interruption (the **Zeigarnik effect**) to drive app installs and episode coin unlocks.
+In the microdrama ecosystem (Kuku, ReelShort, DramaBox), the entire customer acquisition funnel lives or dies by short-form promo ads on TikTok, Instagram Reels, and YouTube Shorts. Viewer behavior is governed by sharp psychological thresholds: we have **under 3 seconds** to halt a user’s scroll, and we need high-tension narrative interruption (the **Zeigarnik effect**) to drive app installs and episode coin unlocks.
 
 As a **Statistics and Data Science student**, this problem offered the most compelling technical and product challenges:
 1. **Algorithmic Rigor over Subjective Hallucination:** Unlike open-ended prompt tasks where LLM outputs are untestable, Problem 1 demanded strict multi-constraint mathematical optimization: exact centisecond timecode arithmetic ($1\text{s} = 100\text{cs}$), mechanical dialogue safety ($0$ cut-off spoken sentences), retention-hook windows ($\le 3\text{s}$), and unresolved dramatic turns.
@@ -21,13 +21,13 @@ As a **Statistics and Data Science student**, this problem offered the most comp
 1. **Promo Duration Bounds:** Continuous segments bounded strictly to $20.00\text{–}60.00$ seconds ($2,000\text{–}6,000$ centiseconds).
 2. **The 3-Second Hook Rule:** In short-form video feeds, a viewer decides to stay or scroll within 3 seconds. An opening dramatic line or striking action must initiate within $3.00\text{s}$ ($\le 300\text{ cs}$) of the promo start.
 3. **Dialogue Integrity:** A cut must *never* fall inside an active spoken line. Cutting an actor mid-word ruins audio flow. Camera angle cuts occurring mid-speech are ignored in favor of dialogue completion.
-4. **No Uncalibrated "Virality Scores":** Virality depends heavily on visual delivery, actor micro-expressions, comedic timing, and audio score mix in finished footage. Estimating virality purely from screenplay text is deceptive; we prioritize source grounding, narrative tension, and mechanical cut safety.
+4. **No Uncalibrated "Virality Scores":** Virality depends heavily on visual delivery, actor micro-expressions, comedic timing, and audio score mix in finished footage. Estimating virality purely from screenplay text is deceptive; i prioritize source grounding, narrative tension, and mechanical cut safety.
 
 ---
 
 ## 2. Solution Architecture & Technical Approach
 
-Rather than relying on an LLM to hallucinate timestamps, we built a hybrid **deterministic-rules + grounded-semantic decision-support engine**:
+Rather than relying on an LLM to hallucinate timestamps, i built a hybrid **deterministic-rules + grounded-semantic decision-support engine**:
 
 ```
 50 Screenplays (.txt) ──► Exact Parser (Centiseconds) ──► Timeline & Dialogue Safety Index
@@ -90,5 +90,5 @@ Filtering the 23,602 candidates down to 761 high-signal candidates having both a
 ---
 
 ## 6. AI Tools Used & One Place They Got It Wrong
-- **AI Tools Used:** Claude / Gemini / Cursor for test fixture scaffolding and React component authoring.
+- **AI Tools Used:** Gemini for test fixture scaffolding and React component authoring.
 - **Where AI Got It Wrong:** When initially prompted to extract promo timestamps directly, AI models hallucinated non-existent fractional seconds (e.g. `00:41.33`) and repeatedly cut boundaries right in the middle of active spoken sentences (violating AC08 dialogue safety). We discarded LLM boundary generation in favor of hard, deterministic Python constraints (`is_dialogue_safe` and centisecond integer snapping) to guarantee perfect cut points.
